@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jogo</title>
+		<link rel="stylesheet" href="css/style.css">
+    </head>
+	<body>
+
+		<div class="game" id="game">
+			<div class="life"> 
+				<img src="imgs/life-icon.png" alt="Vidas" class="life-icon">
+				<span id="life-value"> 3 </span>
+			</div>
+			<div class="score">
+				<div id="score-icon"> </div>
+				<span id="score-value"> 0 </span> / <span id="score-to-win"> 0 </span>
+			</div>
+
+			<div id="game-area" class="game-area">
+				<div class="game-area-background"> </div>
+				<div class="instructions"> <br>
+					<ul class="instructions-list">
+						<li>Este jogo possui caráter educativo;</li>
+						<li>Use as setas ou as letras "A" e "D" do teclado para mover seu personagem;</li>
+						<li>Para vencer, cada personagem deve se alimentar corretamente.</li>
+					</ul>
+				</div>
+				<div id="character">  </div>
+				<button type="button" id="start" class="start-panel"> </button>
+			</div>
+
+			<div class="panel">
+				<button type="button" id="left"> </button>
+				<button type="button" id="right"> </button>
+			</div>
+				
+		</div>
+		
+		<!-- TODO: este codigo pode ser uma unica div que mostra resultados -->
+		<div id="game-over" class="game-over">
+			<div class="game-over-content">
+				<h1>Game Over</h1>
+				<p>Seu placar: <span id="final-score">0</span></p>
+				<div class="previous-results"> </div>
+				<button onclick="restartGame()">Reiniciar</button>
+			</div>
+    	</div>
+
+		<div id="winner" class="winner">
+			<div class="winner-content">
+				<h1>Parabéns, você venceu!</h1>
+				<p>Seu placar: <span id="win-final-score">0</span></p>
+				<div class="previous-results"></div>
+				<button onclick="restartGame()">Reiniciar</button>
+			</div>
+    	</div>
+
+		<audio id="background-song" src="audio/pig-song.mp3" autoplay loop></audio>
+
+		<script src="js/screen.js"></script>
+		<script src="js/character.js"></script>
+    	<script src="js/food.js"></script>
+
+	</body>
+</html>
